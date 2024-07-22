@@ -55,5 +55,14 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
+<<<<<<< HEAD
   "C_Cpp_Runner.msvcSecureNoWarnings": false
+=======
+  "C_Cpp_Runner.msvcSecureNoWarnings": false,
+  "files.associations": {
+    "vector": "cpp",
+    "utility": "cpp",
+    "iostream": "cpp"
+  }
+>>>>>>> ae7733339a5a4b7d0253ff9219b99e49676923c5
 }
