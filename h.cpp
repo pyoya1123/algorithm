@@ -1,55 +1,41 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
-int n;
-int sequence[1000];
+int N;
+int s[1005], e[1005], p[1005];
+int dp[1005];
+
+class node {
+    public:
+        int s;
+        int e;
+        int p;
+        node() {}
+        node(int s, int e, int p):s(s), e(e), p(p) {}
+};
+
+vector<node> vec;
 
 int main() {
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        cin >> sequence[i];
+    cin >> N;
+
+    for (int i = 0; i < N; i++) {
+        cin >> s[i] >> e[i] >> p[i];
+        vec.push_back(node(s[i], e[i], p[i]));
+    }
+
+    for(int i=0;i<N;i++){
+        dp[i] = p[i];
+        for(int j=0;j<i;j++){
+            if(vec[j].e >= vec[i].s) continue;
+            dp[i] = max(dp[j] + p[i], dp[i]);
+        }
     }
 
     int ans = 0;
-
-    for(int i=0;i<=n;i++){ 
-        vector<int> temp;
-        int res = 0;
-
-        // i까지 증가 
-        for(int j=0;j<i;j++){
-            if(temp.empty()) temp.push_back(sequence[j]);
-            else {
-                if(temp.back() < sequence[j]) temp.push_back(sequence[j]);
-                else {
-                    auto it = lower_bound(temp.begin(), temp.end(), sequence[j]);
-                    *it = sequence[j];
-                }
-            }
-        }
-
-        res += temp.size();
-
-        temp.clear();
-
-        // i부터 감소
-        for(int j=i-1;j<n;j++){
-            if(j<0)j++; 
-           if(temp.empty()) temp.push_back(sequence[j]);
-            else {
-                if(temp.back() > sequence[j]) temp.push_back(sequence[j]);
-                else {
-                    auto it = lower_bound(temp.begin(), temp.end(), sequence[j], greater<int>());
-                    *it = sequence[j];
-                }
-            }
-        }
-        res += temp.size();
-        ans = max(ans, res-1);
-    }
+    for(int i=0;i<N;i++) ans = max(ans, dp[i]);
     cout << ans;
 
     return 0;
