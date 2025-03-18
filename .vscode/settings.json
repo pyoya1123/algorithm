@@ -59,6 +59,15 @@
   "files.associations": {
     "iostream": "cpp",
     "ostream": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "climits": "cpp",
+    "__node_handle": "cpp",
+    "__split_buffer": "cpp",
+    "array": "cpp",
+    "deque": "cpp",
+    "queue": "cpp",
+    "string": "cpp",
+    "string_view": "cpp",
+    "unordered_map": "cpp"
   }
 }
