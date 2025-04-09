@@ -81,9 +81,13 @@
     "__tree": "cpp",
     "bitset": "cpp",
     "initializer_list": "cpp",
-    "regex": "cpp"
+    "regex": "cpp",
+    "functional": "cpp",
+    "*.tcc": "cpp",
+    "__bit_reference": "cpp",
+    "__string": "cpp"
   },
   "code-runner.executorMap": {
     "cpp": "cd $dir && g++-14 -std=c++20 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
-}
+},
 }
