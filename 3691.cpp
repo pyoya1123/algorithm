@@ -111,7 +111,8 @@ mouse cordless_optical 125000000 12
 mouse microsoft 125000000 9
 keyboard office 125000000 10
 
-ans: 9 
+ans: 
+10
 
 1
 18 1000000000
@@ -203,6 +204,7 @@ mouse cordless_optical 125000000 0
 mouse microsoft 125000000 1
 keyboard office 125000000 1
 
-ans : 1
+ans : 
+1
 
 */
