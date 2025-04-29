@@ -1,2 +1,2 @@
 
-    string s; cin >> s;
+        for(ll x=1;x<=N;x++) {
