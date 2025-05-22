@@ -38,6 +38,8 @@ struct cmp {
     }
 };
 
+/// @brief 
+/// @return 
 int main() {
     FIO;
     ll tc; cin >> tc;
